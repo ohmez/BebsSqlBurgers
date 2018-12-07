@@ -1,0 +1,21 @@
+.devourMe {
+    position: relative;
+    display: inline-block;
+    margin-left: 8rem;
+    bottom: 6rem;
+}
+body {
+    text-align: center;
+    background: lightcoral;
+}
+#welcomeText {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+}
+#homeImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
