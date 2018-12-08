@@ -1,3 +1,3 @@
 USE bebssqlburgers;
-INSERT INTO burgers (name,devoured) VALUES ('bigmac', false),('cheeseburger');
+INSERT INTO burgers (name) VALUES ('bigmac'),('cheeseburger');
 SELECT * FROM burgers

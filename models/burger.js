@@ -1,6 +1,6 @@
-var db = require("../models");
+
 module.exports = function(sequelize, DataTypes) {
-var Burger = sequelize.define('burger',{
+var Burgers = sequelize.define('burgers',{
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -11,12 +11,8 @@ var Burger = sequelize.define('burger',{
     devoured: {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
-    },
-    id: {
-        type:DataTypes.INTEGER,
-        primaryKey: true,
-        unique: true,
-        autoIncrement: true
-    }});
-    return Burger;
+    }
+    },{
+    timestamps:false});
+    return Burgers;
 };

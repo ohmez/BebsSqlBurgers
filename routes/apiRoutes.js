@@ -1,18 +1,17 @@
-
-
 var db = require("../models");
 
 module.exports = function(app) {
-    app.get("/burgers", function(req,res) {
-        db.Burgers.findAll({}).then(function(results) {
-            console.log(results);
-            res.json(results);
-            res.render("index",{layout:"main"});
-        })
-    });
     app.post("/api/burgers", function(req,res) {
-        db.Burgers.create(req.body.name).then(function(post) {
+        db.burgers.create({name:req.body.name}).then(function(post) {
             res.json(post);
         })
+    });
+    app.put("/api/burgers/:id", (req,res) =>{
+        db.burgers.update(req.body,
+            {
+            where: {
+                id: req.params.id
+            }
+        }).then((results) => res.json(results));
     })
 };
